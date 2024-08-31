@@ -17,7 +17,8 @@ nome VARCHAR (60) NOT NULL
 
 CREATE TABLE aluno (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(50) NOT NULL,
+    nome VARCHAR(25) NOT NULL,
+    sobrenome VARCHAR(25) NOT NULL,
     id_cpf INTEGER REFERENCES usuarios(id),
     id_email INTEGER REFERENCES usuarios(id),    
     id_senha INTEGER REFERENCES usuarios(id),

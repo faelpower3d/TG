@@ -1,5 +1,5 @@
 <?php
-    if (session_status() == PHP_SESSION_ACTIVE) {
+    if (session_status() !== PHP_SESSION_ACTIVE) {
         session_start();
     }
 ?>
@@ -21,6 +21,8 @@
     <form method="POST" action="cadastro.php">  
     <br><label> Nome: </label>
     <input type="text" size="80" maxlength="100" name="nome" required>         
+    <br><label> Nome: </label>
+    <input type="text" size="80" maxlength="100" name="sobrenome" required>         
         <br><label> CPF: </label>
         <input type="text" size="80" name="cpf" id="cpf" maxlength="14" oninput="aplicarFormatoCPF(event)" required>        
         <br><label> Email: </label>
