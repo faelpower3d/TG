@@ -5,7 +5,7 @@
 ?>
 <html>
 <head>   
-    <title>Home</title>
+    <title>Fichas de Treino</title>
 </head>
     <?php
         if (!isset($_SESSION['id'])) {
@@ -25,12 +25,12 @@
                 echo "id não encontrado."; 
             }mysqli_close($con);    
     ?>     
-    <a href="../05FichasTreino/00fichas.php"><input type="button" value="FICHAS DE TREINO"></a>
-    <a href="../04aluno/back/cadastro.php"><input type="button" value="MEUS RESULTADOS"></a>
-    <a href="../04aluno/back/cadastro.php"><input type="button" value="MEU CADASTRO"></a>
-    <a href="../02login/tela_login.php"><input type="button" value="Voltar"></a>
+    Uhul! Sua solicitação foi aceita!!
+Em breve um dos nossos personais cadastrados receberá sua solicitação e montará seu plano de treino exclusivo.
+    
+    <a href="../03home/home.php"><input type="button" value="Voltar"></a>
 </body>
 </html>
 <?php
-    }
+}
 ?>

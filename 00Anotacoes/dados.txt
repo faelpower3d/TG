@@ -1,0 +1,7 @@
+INSERT INTO usuarios (email,cpf,senha) values ('adm','adm','$2y$10$C7iUP5IUIyBloZRJ7m.EL.HYpV.e3VOg8wRQSjovVG1DdrIMh21YG');
+
+INSERT INTO genero (genero) values ('MASCULINO');
+INSERT INTO genero (genero) values ('FEMININO');
+INSERT INTO genero (genero) values ('OUTROS');
+INSERT INTO ct (nome) values ('ACADEMIA01');
+INSERT INTO ct (nome) values ('ACADEMIA02')
