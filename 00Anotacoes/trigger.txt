@@ -1,0 +1,21 @@
+DELIMITER $$
+
+CREATE TRIGGER prevent_duplicate_solicitation
+BEFORE INSERT ON solicitacoes
+FOR EACH ROW
+BEGIN
+    -- Verifica se já existe uma solicitação para o aluno
+    DECLARE count_solicitacoes INT;
+    
+    -- Conta as solicitações do aluno no banco de dados
+    SELECT COUNT(*) INTO count_solicitacoes
+    FROM solicitacoes
+    WHERE id_aluno = NEW.id_aluno;
+
+    -- Se o aluno já tiver uma solicitação, bloqueia a inserção
+    IF count_solicitacoes > 0 THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Já existe uma solicitação de treino para este aluno';
+    END IF;
+END $$
+
+DELIMITER ;

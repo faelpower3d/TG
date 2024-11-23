@@ -29,6 +29,7 @@
     <a href="../04aluno/back/cadastro.php"><input type="button" value="MEUS RESULTADOS"></a>
     <a href="../04aluno/back/cadastro.php"><input type="button" value="MEU CADASTRO"></a>
     <a href="../02login/tela_login.php"><input type="button" value="Voltar"></a>
+    
 </body>
 </html>
 <?php
