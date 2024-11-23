@@ -36,8 +36,9 @@
         <button type="submit" name="solicitar_treino">SOLICITAR TREINO</button>
     </form>
 
+    <a href="01montar.php"><input type="button" value="MONTE SEU TREINO"></a>    
     <a href="../03home/home.php"><input type="button" value="Voltar"></a>
-    <a href="01montar.php"><input type="button" value="MONTE SEU TREINO"></a>
+    
 
     <?php    
         // Verifica se o botão foi pressionado

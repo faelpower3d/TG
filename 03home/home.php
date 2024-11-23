@@ -24,9 +24,10 @@
             }else {
                 echo "id não encontrado."; 
             }mysqli_close($con);    
-    ?>     
+    ?>
+    <a href="../test.html"><input type="button" value="TREINAR"></a>    
     <a href="../05FichasTreino/00fichas.php"><input type="button" value="FICHAS DE TREINO"></a>
-    <a href="../04aluno/back/cadastro.php"><input type="button" value="MEUS RESULTADOS"></a>
+    <a href="../test.html"><input type="button" value="MEUS RESULTADOS"></a>
     <a href="../04aluno/back/cadastro.php"><input type="button" value="MEU CADASTRO"></a>
     <a href="../02login/tela_login.php"><input type="button" value="Voltar"></a>
     

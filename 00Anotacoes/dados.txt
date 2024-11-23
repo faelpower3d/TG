@@ -7,4 +7,10 @@ INSERT INTO ct (nome) values ('ACADEMIA01');
 INSERT INTO ct (nome) values ('ACADEMIA02')
 
 
-falta conectar com solicitacoes
+
+INSERT INTO exercicios (id, nome, descricao, gif_url)
+VALUES
+  (1, 'ombro', 'Desenvolvimento lateral sentado', 'https://i.pinimg.com/originals/0a/9e/dd/0a9edd77869a9143393440bc9eaf5bc3.gif'),
+  (2, 'ombro', 'Desenvolvimento Arnold', 'https://i.pinimg.com/originals/4b/df/fd/4bdffd08454625993ff85d3c860cbf2a.gif'),
+  (3, 'Prancha', 'Exercício de estabilidade no solo', 'https://exemplo.com/gif_prancha.gif'),
+  (4, 'Abdominal', 'Exercício para trabalhar a região do abdômen', 'https://exemplo.com/gif_abdominal.gif');

@@ -41,4 +41,27 @@ CREATE TABLE aluno (
     altura DECIMAL(3,1) NOT NULL
 )ENGINE=INNODB;
 
+CREATE TABLE exercicios (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    descricao TEXT,
+    gif_url VARCHAR(255)
+)ENGINE=INNODB;
 
+CREATE TABLE treinos (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    id_aluno INT, 
+    nome_treino VARCHAR(255), 
+    data_criacao DATE,
+    FOREIGN KEY (id_aluno) REFERENCES aluno(id) -- Assume que você tem uma tabela de alunos
+)ENGINE=INNODB;
+
+CREATE TABLE treino_exercicios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_treino INT,
+    id_exercicio INT,
+    serie INT,
+    repeticao INT,
+    FOREIGN KEY (id_treino) REFERENCES treinos(id),
+    FOREIGN KEY (id_exercicio) REFERENCES exercicios(id)
+)ENGINE=INNODB;
