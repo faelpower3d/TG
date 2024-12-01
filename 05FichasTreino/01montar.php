@@ -31,7 +31,9 @@
             // Exibir os dados de cada exercício
             echo "<div class='exercicios'>";
             while ($row = mysqli_fetch_assoc($result)) {
-                echo "<div class='exercicio'>";
+                
+                echo "<div class='exercicio'>";  
+                echo '<td style="float:center"> <input type="checkbox" name= "Sim">';                              
                 echo "<h2>" . $row['nome'] . "</h2>"; // Exibir o nome do exercício
                 echo "<p>" . $row['descricao'] . "</p>"; // Exibir a descrição
                 echo "<img src='" . $row['gif_url'] . "' alt='" . $row['nome'] . "' />"; // Exibir o GIF
