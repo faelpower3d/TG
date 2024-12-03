@@ -6,23 +6,23 @@
 <html>
 <head>
     <title>GUIA ACADM</title>
+    <link rel="stylesheet" href="../css/main.css">
 </head>
-<body>
-    <p><h1>LOGIN</h1>
+<body>    
     <?php
         if (isset($_SESSION['msg'])){
             echo $_SESSION['msg'];
             unset($_SESSION['msg']);       
         }   
     ?>
-    <form method="POST" action="login.php">
-    <label> Nome: </label>
-        <input type="text" size="80" maxlength="100" name="login" required>  <br>      
-        <br><label> Endereço: </label>
-        <input type="password" size="80" maxlength="100" name="senha1" required>               
-        </select>
-        <p><input type="submit" value="Entrar" name="entrar">
+    <div class = "login-container">
+    <img src="../image/logoGA.png" alt="Guia Academ Logo">
+    <form method="POST" action="login.php">    
+        <input type="text" placeholder="E-mail ou nome de usuário" name="login" required>         
+        <input type="password" placeholder="Senha" name="senha1" required>    
+        <input type="submit" value="Entrar" name="entrar" class="buttons">
     </form>
-    <a href="../01cadastro/tela_cadastro.php"><button>Cadastrar</button></a> 
+    <a href="../01cadastro/tela_cadastro.php"><button>Cadastrar</button></a>
+    </div> 
 </body>
 </html>
