@@ -2,9 +2,13 @@
     if (session_status() !== PHP_SESSION_ACTIVE) {
         session_start();
     }
+    if (!isset($_SESSION['id'])) {
+        header("Location: ../02login/tela_login.php");
+        exit(); 
+    }
     if (isset($_SESSION['id'])) {
     
-    include ("../../conexao/academia.php");
+    include ("../conexao/academia.php");
     $id = $_SESSION['id']; 
   
     $result = "SELECT * FROM aluno WHERE id_cpf = '$id'";
@@ -127,6 +131,6 @@
         <p><input type="submit" value="Cadastrar"></p>
     </form>
 
-    <a href="../../03home/home.php"><input type="button" value="Voltar"></a>
+    <a href="../03home/home.php"><input type="button" value="Voltar"></a>
 </body>
 </html>

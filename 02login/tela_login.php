@@ -16,13 +16,13 @@
         }   
     ?>
     <div class = "login-container">
-    <img src="../image/logoGA.png" alt="Guia Academ Logo">
-    <form method="POST" action="login.php">    
-        <input type="text" placeholder="E-mail ou nome de usuário" name="login" required>         
-        <input type="password" placeholder="Senha" name="senha1" required>    
-        <input type="submit" value="Entrar" name="entrar" class="buttons">
-    </form>
-    <a href="../01cadastro/tela_cadastro.php"><button>Cadastrar</button></a>
+        <img src="../image/logoGA.png" alt="Guia Academ Logo">
+        <form method="POST" action="login.php">    
+            <input type="text" placeholder="E-mail ou nome de usuário" name="login" required>         
+            <input type="password" placeholder="Senha" name="senha1" required>    
+            <input class="buttons" type="submit" value="Entrar" name="entrar">
+        </form>
+        <button  onclick="window.location.href='../01cadastro/tela_cadastro.php';">Cadastrar</button>
     </div> 
 </body>
 </html>
