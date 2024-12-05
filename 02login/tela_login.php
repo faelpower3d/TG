@@ -18,7 +18,7 @@
     <div class = "login-container">
         <img src="../image/logoGA.png" alt="Guia Academ Logo">
         <form method="POST" action="login.php">    
-            <input type="text" placeholder="E-mail ou nome de usuário" name="login" required>         
+            <input type="text" placeholder="E-mail" name="login" required>         
             <input type="password" placeholder="Senha" name="senha1" required>    
             <input class="buttons" type="submit" value="Entrar" name="entrar">
         </form>

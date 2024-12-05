@@ -38,7 +38,7 @@ CREATE TABLE aluno (
     id_genero INTEGER REFERENCES genero(id),    
     idade TINYINT NOT NULL,
     peso DECIMAL(5,2) NOT NULL,
-    altura DECIMAL(3,1) NOT NULL
+    altura DECIMAL(5,1) NOT NULL
 )ENGINE=INNODB;
 
 CREATE TABLE exercicios (

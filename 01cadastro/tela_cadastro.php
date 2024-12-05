@@ -45,7 +45,7 @@
         <div class="form-group">
             <input type="number" name="idade" placeholder="Idade">
             <input type="number" name="peso" placeholder="Peso (kg)">
-            <input type="number" name="altura" placeholder="Altura (cm)">
+            <input type="number" name="altura" step="0.01" placeholder="Altura (cm)" required>
         </div>
         <div class="button-group">
             <button type="submit" class="btn-submit">Cadastrar</button>
