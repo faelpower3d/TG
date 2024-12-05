@@ -20,7 +20,7 @@ $altura = $_POST['altura'];
 $senha = password_hash($id_senha, PASSWORD_DEFAULT);
 
 // Verificar se o CPF já está registrado
-$query_select = "SELECT id FROM usuarios WHERE cpf = '$cpf'";
+$query_select = "SELECT id FROM usuarios WHERE email = '$email'";
 $select = mysqli_query($con, $query_select);
 $array = mysqli_fetch_array($select);
 $id_usuario = $array['id'];
