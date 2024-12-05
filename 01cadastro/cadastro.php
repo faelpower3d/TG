@@ -25,7 +25,7 @@ $select = mysqli_query($con, $query_select);
 $array = mysqli_fetch_array($select);
 $id_usuario = $array['id'];
 
-if (!$id_usuario) {
+if ($id_usuario) {
     $_SESSION['msg'] = "Login já existente";
     header("Location: tela_cadastro.php");
     exit();  // Importante para evitar que o script continue executando
