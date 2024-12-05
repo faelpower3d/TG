@@ -38,6 +38,8 @@ if (!isset($_SESSION['id'])) {
             echo "<h1>Exercício: " . $row['exercicio_nome'] . "</h1>";
             echo "<p>Descrição: " . $row['exercicio_descricao'] . "</p>";
             echo "<img src='" . $row['exercicio_gif'] . "' alt='" . $row['exercicio_nome'] . "' />";
+            echo "<p>Series: 4 </p>";
+            echo "<p>Reps: 12 </p>";
         } else {
             echo "<p>Exercício não encontrado.</p>";
         }
