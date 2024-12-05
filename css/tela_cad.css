@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #232323, #3c3c3c);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.cadastro-container {
+  background-image: url('../image/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px;
+  position: relative;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  height: 800px;
+}
+
+.cadastro-container img {
+  width: 90%;
+  top: -70px;
+  z-index: 1;   
+  position: absolute;
+}
+
+
+.cadastro-container h1 {
+  color: #ffffff;
+  font-size: 24px;
+  margin-top: 90px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.cadastro-container .gen{
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.cadastro-container input, .container select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  background: #ffffff;
+  color: #000000;
+}
+
+.cadastro-container select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.cadastro-container .gender-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 180;
+  margin-left: 0px;
+}
+
+.cadastro-container .gender-container label {
+  display: flex; /* Adiciona o layout flex */
+  align-items: center; /* Alinha o texto verticalmente ao centro */
+  font-size: 16px;
+}
+
+.cadastro-container .gender-container input[type="radio"] {
+  margin-right: 8px; /* Espaço entre o rádio e o texto */
+}
+
+.cadastro-container .form-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cadastro-container .form-group input {
+  width: 32%;
+}
+
+.cadastro-container .form-group input[name="cidade"] {
+  width: 170%;
+}
+
+.cadastro-container button {
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  bottom: -10px;
+}
+
+.cadastro-container .btn-back {
+  background-color: #8b0000;
+  color: #ffffff;
+}
+
+.cadastro-container .btn-back:hover {
+  background-color: #b30000;
+}
+
+.cadastro-container .btn-submit {
+  background-color: #8b0000;
+  color: #ffffff;
+}
+
+.cadastro-container .btn-submit:hover {
+  background-color: #b30000;
+}
+
+hr {
+  border: 0;
+  border-top: 3px solid #cccccc;
+  margin: 20px 0;
+}

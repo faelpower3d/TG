@@ -2,39 +2,32 @@
     if (session_status() !== PHP_SESSION_ACTIVE) {
         session_start();
     }
-    if (!isset($_SESSION['id'])) {
-        header("Location: ../02login/tela_login.php");
-        exit(); 
-    }
 ?>
 <html>
 <head>   
     <title>Home</title>
+    <link rel="stylesheet" href="../css/tela_home.css">
 </head>
-    <?php
+<?php
         if (!isset($_SESSION['id'])) {
-            header("Location:../03aluno/index.html");            
+            header("Location:../02login/tela_login.php");            
         }else{                   
     ?>
 <body>
-    <?php    
-        include ("../conexao/academia.php");; 
-        $id = $_SESSION['id'];        
-        $query = "SELECT nome FROM aluno WHERE id_cpf = $id"; 
-        $result = mysqli_query($con, $query);
-        $row = mysqli_fetch_assoc($result);         
-        if ($row) {                  
-            echo "<p>Bem vindo: " .$row['nome']."</p>";             
-            }else {
-                echo "id não encontrado."; 
-            }mysqli_close($con);    
-    ?>
-    <a href="../06Treinar/treinar.php"><input type="button" value="TREINAR"></a>    
-    <a href="../05FichasTreino/00fichas.php"><input type="button" value="FICHAS DE TREINO"></a>
-    <a href="../test.html"><input type="button" value="MEUS RESULTADOS"></a>
-    <a href="../04aluno/cadastro.php"><input type="button" value="MEU CADASTRO"></a>
-    <a href="../02login/tela_login.php"><input type="button" value="Voltar"></a>
     
+<div class="home-container">
+<img src="../image/logoGA2.png" alt="Guia Academ Logo">
+
+    <div class="buttons">
+        <button class="register-button" onclick="window.location.href='../06Treinar/treinar.php';">TREINAR</button>
+        <button class="register-button" onclick="window.location.href='../05FichasTreino/00fichas.php';">FICHAS DE TREINO</button>
+        <button class="register-button" onclick="window.location.href='../test.html';">MEUS RESULTADOS</button>
+        <button class="register-button" onclick="window.location.href='../04aluno/cadastro.php';">MEU CADASTRO</button>
+    </div>
+    <div class="voltar">
+        <button class="register-button" onclick="window.location.href='../02login/tela_login.php';" name="voltar" >VOLTAR</button>
+    </div>
+</div>
 </body>
 </html>
 <?php
